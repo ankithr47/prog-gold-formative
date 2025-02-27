@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norton Cricket Club - Nets Booking</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
+        header { background: #333; color: white; padding: 15px; }
+        h1 { margin: 0; text-align: center; display: inline-block;}
+        nav { background: #444; padding: 10px; }
+        nav a { text-decoration: none; color: white; padding: 10px 20px; margin: 0 5px; border-radius: 5px; }
+        nav a:hover { background: #555; }
+        .container { padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px auto; background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        th { background: #333; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        tr:hover { background: #f1f1f1; }
+        .booked { background: #ffcccc; color: #cc0000; }
+        .available { background: #ccffcc; color: #006600; }
+        .booked, .available { font-weight: bold; }
+        
+        #photo-list {display: flex; gap: 30px; flex-wrap: wrap;}
+        #photo-list img {height: 300px; width: auto; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Norton Cricket Club <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3IPgAWP-fLvkD5Dt6_a65mLkvD2uQwr2Gw&s" 
+            alt="Club Badge" style="height: 75px; width: auto;"></h1>
+        
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#booking">Nets Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <h2>Welcome to Norton Cricket Club</h2>
+        <p>Book your cricket net slots online and practice your skills!</p>
+    </section>
+
+    <div id="photo-list" class="container">
+        <img src="https://tritechsurveys.com/wp-content/uploads/2023/07/Norton-Cricket-Club-Sponsored-by-Tri-Tech-Surveys.jpg" 
+                alt="Cricket Team Photo" id="CupWinners"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3IPgAWP-fLvkD5Dt6_a65mLkvD2uQwr2Gw&s" alt="Club Badge">
+        <img src="https://pbs.twimg.com/media/FbZVu8MXEAAAoW3?format=jpg&name=4096x4096" alt="PremierCupWinners">
+    </div>
+
+    <!-- Nets Booking Section -->
+    <section id="booking" class="container">
+        <h2>Nets Booking</h2>
+        <p>Below is the availability of cricket net slots from Monday to Sunday (9 AM - 9 PM).</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows for each time slot -->
+                <tr>
+                    <td>9:00 AM</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: Men's 1st XI</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: Women's 1st XI</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: U11</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: Men's 2nd XI</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td class="booked">Booked: U15s</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: Men's 3rd XI</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: Women's 2nd XI</td>
+                </tr>
+                <!-- Add more rows for other time slots (12 PM - 9 PM) -->
+                <tr>
+                    <td>12:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="booked">Booked: Men's Midweek XI</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>3:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>6:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>7:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>8:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+                <tr>
+                    <td>9:00 PM</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                    <td class="available">Available</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>For any inquiries, please email us at <a href="mailto:info@nortoncricketclub.com">info@nortoncricketclub.com</a>.</p>
+    </section>
+
+
+    <tbody id="schedule-table">
+
+    </tbody>
+
+    <script>
+        const Times = ['09:00', '10:00', '11:00', '12:00', '13:00', 
+            '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'
+        ]
+
+        const Booked = {
+            'Tuesday': []
+        }
+    </script>
+</body>
+</html>
