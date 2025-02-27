@@ -6,42 +6,45 @@
     <title>Norton Cricket Club - Nets Booking</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
-        header { background: #333; color: white; padding: 15px; }
-        h1 { margin: 0; text-align: center; display: inline-block;}
+        header { background-color: #650c0c; color: white; padding: 15px; }
+        
         nav { background: #444; padding: 10px; }
         nav a { text-decoration: none; color: white; padding: 10px 20px; margin: 0 5px; border-radius: 5px; }
         nav a:hover { background: #555; }
+        
         .container { padding: 20px; }
         table { width: 100%; border-collapse: collapse; margin: 20px auto; background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
         th { background: #333; color: white; }
         tr:nth-child(even) { background: #f9f9f9; }
         tr:hover { background: #f1f1f1; }
-        .booked { background: #ffcccc; color: #cc0000; }
-        .available { background: #ccffcc; color: #006600; }
-        .booked, .available { font-weight: bold; }
         
+        .booked { background-color: #ffcccc; color: #cc0000; }
+        .available { background-color: #ccffcc; color: #006600; }
+        .booked, .available { font-weight: bold; }
+        /* Align photos on home page*/
         #photo-list {display: flex; gap: 30px; flex-wrap: wrap;}
         #photo-list img {height: 300px; width: auto; object-fit: cover; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Norton Cricket Club <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3IPgAWP-fLvkD5Dt6_a65mLkvD2uQwr2Gw&s" 
+        <h1 style="display: flex; align-items: center; gap: 10px;">Norton Cricket Club <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3IPgAWP-fLvkD5Dt6_a65mLkvD2uQwr2Gw&s" 
             alt="Club Badge" style="height: 75px; width: auto;"></h1>
         
     </header>
 
-    <!-- Navigation Tabs -->
+    <!-- Tabs to navigate -->
     <nav>
         <a href="#home">Home</a>
         <a href="#booking">Nets Booking</a>
         <a href="#contact">Contact</a>
+        <a href="#log in">Log in/Sign up</a>
     </nav>
 
-    <!-- Home Section -->
+    <!-- home section -->
     <section id="home" class="container">
-        <h2>Welcome to Norton Cricket Club</h2>
+        <h2 >Welcome to Norton Cricket Club</h2>
         <p>Book your cricket net slots online and practice your skills!</p>
     </section>
 
@@ -52,11 +55,11 @@
         <img src="https://pbs.twimg.com/media/FbZVu8MXEAAAoW3?format=jpg&name=4096x4096" alt="PremierCupWinners">
     </div>
 
-    <!-- Nets Booking Section -->
+    <!-- nets booking -->
     <section id="booking" class="container">
         <h2>Nets Booking</h2>
         <p>Below is the availability of cricket net slots from Monday to Sunday (9 AM - 9 PM).</p>
-        <table>
+        <table id="bookings_table">
             <thead>
                 <tr>
                     <th>Time</th>
@@ -209,7 +212,7 @@
     <!-- Contact Section -->
     <section id="contact" class="container">
         <h2>Contact Us</h2>
-        <p>For any inquiries, please email us at <a href="mailto:info@nortoncricketclub.com">info@nortoncricketclub.com</a>.</p>
+        <p>Any questions, email us at <a href="mailto:info@nortoncricketclub.com">info@nortoncricketclub.com</a>.</p>
     </section>
 
 
@@ -218,13 +221,22 @@
     </tbody>
 
     <script>
-        const Times = ['09:00', '10:00', '11:00', '12:00', '13:00', 
-            '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'
-        ]
+        // func to change booking status on click
+        function toggleBooking(event) {
+            const tableentry = event.target
 
-        const Booked = {
-            'Tuesday': []
+            if (tableentry.classList.contains('available')) {
+                tableentry.textContent = 'Booked: Your Booking';
+                tableentry.classList.remove('available');
+                tableentry.classList.add('booked');
+            }
+            else if (tableentry.classList.contains('booked')) {
+                alert('This slot is already booked.')
+            }
         }
+        //put event listener in table
+        document.querySelector('#bookings_table').addEventListener('click', toggleBooking);
+
     </script>
 </body>
 </html>
